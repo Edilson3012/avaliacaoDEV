@@ -1,5 +1,5 @@
 
-SELECT 	CONCAT(u.nome, ' - ', i.genero ) AS usuário, i.ano_nascimento,
+SELECT 	CONCAT(u.nome, ' - ', i.genero ) AS usuário
 			IF(i.ano_nascimento > 1970, 'NÃO', 'SIM' ) AS 'maior_50_anos'
 FROM usuario AS u
 INNER JOIN info AS i ON i.cpf = u.cpf
